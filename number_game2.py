@@ -7,6 +7,14 @@ import random
 
 
 def game():
+    """lets player play the game.
+    asks player to provide a number.
+    makes computer generates a random number
+    If computer's number is too high, generate another number lower than it.
+    If computer's number is too low, generate another number higher than it.
+    prints win/lose messages at the end of each run.
+    gives player options to play again.
+    """
     valid_user_guess = False
     while not valid_user_guess:
         try:

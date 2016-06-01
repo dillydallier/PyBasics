@@ -1,24 +1,25 @@
-# Make it possible to move items from one position to another
 def move_item(old_index, new_index):
+    """Makes it possible to move items from one position to another"""
     item_to_move = shopping_list[old_index]
     shopping_list.insert(new_index, item_to_move)
     del shopping_list[old_index]
 
 
-# Create a CLEAR command that remove everything from the list
 def clear_list():
+    """Creates a CLEAR command that removes everything from the list"""
     shopping_list.clear()
     print("\nYou list is cleared.")
 
 
 def remove_item(index):
+    """Makes it possible to remove items from the list"""
     index_to_delete = index - 1
     item = shopping_list.pop(index_to_delete)
     print("Removed {}.".format(item))
 
 
-# have a SHOW command
 def show_list():
+    """Creates a SHOW command that shows the current list"""
     # print out the list
     print("Here's your list:")
     count = 1
@@ -28,8 +29,8 @@ def show_list():
         count += 1
 
 
-# have a HELP command
 def show_help():
+    """Creates a HELP command that prints out the help messages"""
     # print out instructions on how to use the app
     print("Here's your current list:")
     start()
@@ -45,17 +46,16 @@ Enter 'CLEAR' to remove everything from the list.
 """)
 
 
-# clean code up in general
 def add_to_list(new_item):
-    # add new items to our list
+    """Add new items to our list"""
     shopping_list.append(new_item)
     print(
         "Added {}. List now has {} items."
         .format(new_item, len(shopping_list)))
 
 
-# Add a "SAVE" option to your script.
 def save_list():
+    """Creates a SAVE method that saves the shopping list to a .txt file"""
     # Use the open function to open a file
     output = open("shopping_list.txt", 'w')
     # and save your shopping list to it
@@ -67,6 +67,7 @@ def save_list():
 
 
 def start():
+    """Starts each session by loading a previously saved list."""
     input = open('shopping_list.txt', 'r')
     # Then use a for loop on the file to read each line in the file.
     for line in input:

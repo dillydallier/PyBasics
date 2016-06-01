@@ -3,6 +3,14 @@ import random
 
 
 def game():
+    """lets player play the game.
+    generates a random number.
+    asks player to guess the number.
+    If the player's guess is too high, tell him so.
+    If the player's guess is too low, tell him so.
+    prints win/lose messages at the end of each run.
+    gives player options to play again.
+    """
     secret_num = random.randint(1, 10)
     guesses = []
 
