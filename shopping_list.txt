@@ -1,0 +1,8 @@
+1:oranges
+2:apples
+3:milk
+4:rice
+5:tofu
+6:pears
+7:candles
+8:eggs
