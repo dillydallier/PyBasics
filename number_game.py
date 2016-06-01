@@ -1,7 +1,9 @@
 # generate a random number between 1 and 10
 import random
+
+
 def game():
-    secret_num = random.randint(1,10)
+    secret_num = random.randint(1, 10)
     guesses = []
 
     while len(guesses) < 5:

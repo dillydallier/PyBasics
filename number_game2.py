@@ -1,8 +1,10 @@
 # Try to build the opposite of this game.
 # Make a game where the computer tries to guess your secret number.
-# You'll need to come up with a way to tell the computer if it's too high, too low, or if it guesses the number!
+# You'll need to come up with a way to tell the computer
+# if it's too high, too low, or if it guesses the number!
 
 import random
+
 
 def game():
     valid_user_guess = False
@@ -19,18 +21,20 @@ def game():
                 valid_user_guess = True
                 print("Enjoy the game!!!\n")
 
-    guesses = [ ]
+    guesses = []
     min = 1
     max = 100
 
     while len(guesses) < 5:
-        computer_guess = random.randint(min,max)
+        computer_guess = random.randint(min, max)
 
         guesses.append(computer_guess)
 
         # compare computer's guess with user's number
         if computer_guess == user_num:
-            print("You won this time. You took {} guesses".format(len(guesses)))
+            print(
+                "You won this time. You took {} guesses"
+                .format(len(guesses)))
             break
         elif computer_guess < user_num:
             print("My number is higher than {}".format(computer_guess))
